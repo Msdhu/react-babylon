@@ -1,0 +1,11 @@
+body {
+    background-color: #fff;
+}
+
+div {
+    display: flex;
+}
+
+.active {
+    color: red;
+}
