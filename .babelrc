@@ -1,8 +1,0 @@
-{
-    "presets": [['latest', {
-        "es2015": {
-          "modules": false
-        }
-    }], 'react', 'stage-2'],
-    "plugins": ['transform-runtime', 'transform-class-properties', 'react-hot-loader/babel'],
-}

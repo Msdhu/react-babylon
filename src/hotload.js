@@ -4,16 +4,16 @@ import { AppContainer } from 'react-hot-loader';
 import App from './app';
 
 const render = (Component) => {
-    ReactDOM.render(
-      <AppContainer>
-        <Component list={[1, 2, 3]} />
-      </AppContainer>,
-      document.getElementById('root')
-    );
+  ReactDOM.render(
+    <AppContainer>
+      <Component />
+    </AppContainer>,
+    document.getElementById('_j_root')
+  );
 };
 
 render(App);
 
 if (module.hot) {
-    module.hot.accept('./app', () => render(App));
+  module.hot.accept('./app', () => render(App));
 }

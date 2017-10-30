@@ -1,0 +1,112 @@
+html {
+  box-sizing: border-box;
+  color: #333;
+  font: 18pt 'Oswald';
+  letter-spacing: 0.05em;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+.primary-layout,
+.unauthorized-layout {
+  margin: 1em;
+}
+
+h1 {
+  font-size: 1.3em;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+button {
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.5em 1em;
+  background-color: #4db14d;
+  color: #fff;
+  cursor: pointer;
+  outline: 0;
+  font-size: 15pt;
+}
+
+button:focus {
+  background-color: #3e8d3e;
+}
+
+button.outline {
+  border: 1px solid #999;
+  background-color: #fff;
+  color: #555;
+}
+
+button.outline:hover {
+  border-color: #4db14d;
+  color: #4db14d;
+}
+
+.primary-header {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.primary-header nav {
+  -ms-flex: 1;
+  flex: 1;
+  margin-left: 2em;
+  border-bottom: 2px solid #555;
+}
+
+.primary-header nav a {
+  display: inline-block;
+  padding: 0.3em 1em;
+  color: #555;
+}
+
+.primary-header nav a:hover {
+  background-color: #eee;
+}
+
+.primary-header nav a.active {
+  background-color: #555;
+  color: #fff;
+}
+
+main {
+  margin-top: 1em;
+}
+
+.user-sub-layout {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-sub-layout aside {
+  width: 200px;
+}
+
+.user-sub-layout aside nav a {
+  color: #333;
+  padding: 0.2em 1em;
+  display: block;
+}
+
+.user-sub-layout aside nav a.active {
+  background-color: #555;
+  color: #fff;
+}
+
+.user-sub-layout .primary-content {
+  -ms-flex: 1;
+  flex: 1;
+  margin-left: 2em;
+}
