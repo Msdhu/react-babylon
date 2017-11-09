@@ -1,6 +1,6 @@
 import { takeEvery, put, all, call } from 'redux-saga/effects';
 import { GET_LOGGED_USER, SET_USER_LOGIN, SET_USER_LOGOUT,
-  GET_LOGGED_USER_RESPONSE, SET_USER_LOGIN_RESPONSE, SET_USER_LOGOUT_RESPONSE } from '../reducers/loggedUserAction';
+  GET_LOGGED_USER_RESPONSE, SET_USER_LOGIN_RESPONSE, SET_USER_LOGOUT_RESPONSE } from '../reducers/loggedUserReducer/loggedUserAction';
 import fetchSomething from '../apis/fetchLog';
 
 // Our worker Saga

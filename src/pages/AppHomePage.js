@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
-import { logout } from '../reducers/loggedUserActionCreator';
+import { logout } from '../reducers/loggedUserReducer/loggedUserActionCreator';
 
 const mapDispatchToProps = dispatch => bindActionCreators({ logout }, dispatch);
 

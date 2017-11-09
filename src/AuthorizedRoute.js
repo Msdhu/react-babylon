@@ -3,9 +3,17 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
-import { getLoggedUser } from './reducers/loggedUserActionCreator';
+import { getLoggedUser } from './reducers/loggedUserReducer/loggedUserActionCreator';
 
-class AuthorizedRoute extends Component {
+
+const mapStateToProps = ({ loggedUserState }) => ({
+  logged: loggedUserState.logged
+});
+
+const mapDispatchToProps = dispatch => bindActionCreators({ getLoggedUser }, dispatch);
+
+@connect(mapStateToProps, mapDispatchToProps)
+export default class AuthorizedRoute extends Component {
   static propTypes = {
     getLoggedUser: PropTypes.func.isRequired,
     component: PropTypes.func.isRequired,
@@ -30,11 +38,3 @@ class AuthorizedRoute extends Component {
     );
   }
 }
-
-const mapStateToProps = ({ loggedUserState }) => ({
-  logged: loggedUserState.logged
-});
-
-const mapDispatchToProps = dispatch => bindActionCreators({ getLoggedUser }, dispatch);
-
-export default connect(mapStateToProps, mapDispatchToProps)(AuthorizedRoute);

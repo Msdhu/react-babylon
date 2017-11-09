@@ -1,10 +1,12 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import loggedUserReducer from '../reducers/loggedUserReducer';
+import loggedUserReducer from '../reducers/loggedUserReducer/loggedUserReducer';
+import commentReducer from '../reducers/commentReducer/commentReducer';
 import { sagaRoot } from '../sagas/saga';
 
 const reducers = combineReducers({
-  loggedUserState: loggedUserReducer
+  loggedUserState: loggedUserReducer,
+  commentState: commentReducer,
 });
 
 const saga = createSagaMiddleware();
